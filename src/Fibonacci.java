@@ -58,7 +58,8 @@ public class Fibonacci {
         if (current < 0) throw new ArithmeticException("Integral overflow");
 
         // Return the final number in the sequence
-
+        // If n is 1 it will ignore the for loop and return the current value witch is 1, this avoids giving the n = 1
+        // case a specific return statement.
         return current;
     }
 

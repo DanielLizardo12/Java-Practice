@@ -42,15 +42,9 @@ public class PowerSum {
     }
 
     public static int powerSum(ArrayList<Object> initialArray, int pow) {
-        int finalValue = 0;
-
-        for (Object o : initialArray) {
-            if (o instanceof Integer) {
-                finalValue = finalValue + (int) o;
-            } else {
-                finalValue = finalValue + powerSum((ArrayList<Object>) o, pow + 1);
-            }
-        }
+        int finalValue = initialArray.stream()
+                .mapToInt(o -> o instanceof  Integer ? (int) o : powerSum((ArrayList<Object>) o, pow + 1))
+                .sum();
         return (int) Math.pow(finalValue, pow);
     }
 }

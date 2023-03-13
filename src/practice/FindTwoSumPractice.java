@@ -7,6 +7,6 @@ package practice;
 public class FindTwoSumPractice {
 
     public static int[] findTwoSum(int[] intsArray, int targetValue) {
-        return new int[]{1, 2};
+        return new int[]{};
     }
 }

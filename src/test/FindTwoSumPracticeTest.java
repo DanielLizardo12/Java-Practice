@@ -1,6 +1,7 @@
-package practice;
+package test;
 
 import org.junit.jupiter.api.Test;
+import practice.FindTwoSumPractice;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,3 +1,5 @@
+package challenges;
+
 import java.math.BigInteger;
 
 /**
@@ -25,11 +27,11 @@ public class Fibonacci {
      *   - The algorithm uses only constant space to store the previous two numbers in the sequence.
      *   - The space complexity does not depend on the input value n.
      *   - The reason for this is that the algorithm only uses three variables
-     *   (previous, current, and next) to compute the Fibonacci sequence, and these variables occupy a constant
+     *   (previous, current, and next) to compute the challenges.Fibonacci sequence, and these variables occupy a constant
      *   amount of memory regardless of the value of n. This is why the space complexity is considered O(1).
      *
      * @param n the index of the number to return
-     * @return the nth number in the Fibonacci sequence
+     * @return the nth number in the challenges.Fibonacci sequence
      * @throws IllegalArgumentException if n is negative
      * @throws ArithmeticException if the final number in the sequence overflows an int
      */

@@ -30,4 +30,10 @@ class FirstNonRepeatingCharacterTest {
         assertEquals(0, result);
     }
 
+    @Test
+    public void testFirstNonRepeatingCharacterFourthTest() {
+        Integer result = FirstNonRepeatingCharacter.firstNonRepeatingCharacter("DDAbcIIAcbd");
+        assertEquals(10, result);
+    }
+
 }

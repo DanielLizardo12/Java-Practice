@@ -8,7 +8,7 @@ import java.util.Map;
  * @Date 14/03/2023
  */
 public class FirstNonRepeatingCharacter {
-    public static Integer firstNonRepeatingCharacter(String string){
+    public static Integer firstNonRepeatingCharacter(String string) {
         Map<Character, Integer> frequency = new HashMap<>();
         for (int i = 0; i < string.length(); i++) {
             char c = string.charAt(i);

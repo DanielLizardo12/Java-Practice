@@ -15,7 +15,8 @@ class AllSubSetsTest {
 
     @Test
     public void testSubSetsFistTestCase() {
-        List<List<Integer>> result = AllSubSets.subsets(new int[]{1, 2, 3});
-        assertEquals(0, result.size());
+        List<List<Integer>> result = AllSubSets.subsets(new int[]{1, 8, 7});
+        System.out.println(result);
+        assertEquals(8, result.size());
     }
 }

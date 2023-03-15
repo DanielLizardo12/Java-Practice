@@ -32,6 +32,7 @@ class PalindromeTest {
     public void testPalindromeFourthTest() {
         assertTrue(Palindrome.palindrome("b"));
     }
+
     @Test
     public void testPalindromeFifthTest() {
         assertFalse(Palindrome.palindrome("aA"));

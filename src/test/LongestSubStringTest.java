@@ -18,4 +18,22 @@ class LongestSubStringTest {
         assertEquals(8, result);
     }
 
+    @Test
+    public void testLengthOfLongestSubStringSecondTest() {
+        int result = LongestSubString.lengthOfLongestSubString("ppppp");
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testLengthOfLongestSubStringThirdTest() {
+        int result = LongestSubString.lengthOfLongestSubString("abcbccd");
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void testLengthOfLongestSubStringFourthTest() {
+        int result = LongestSubString.lengthOfLongestSubString("pqbrstbuvwvxy");
+        assertEquals(7, result);
+    }
+
 }

@@ -10,26 +10,26 @@ import java.util.HashMap;
 public class LongestSubString {
 
     public static int lengthOfLongestSubString(String s) {
-        HashMap<Character, Integer> seen = new HashMap<>();
-        int start = 0;
-        int max = 0;
-        int currentSubStringLength = 0;
+        HashMap<Character, Integer> charIndexMap = new HashMap<>();
+        int startIndex = 0;
+        int maxLength = 0;
+        int currentLength = 0;
 
         for (int i = 0; i < s.length(); i++) {
-            if (shouldUpdateSubstring(seen, s.charAt(i), start, i)) {
-                start = seen.get(s.charAt(i)) + 1;
-                seen.put(s.charAt(i), i);
-                i = start;
-                currentSubStringLength = 1;
+            if (shouldUpdateSubstring(charIndexMap, s.charAt(i), startIndex, i)) {
+                startIndex = charIndexMap.get(s.charAt(i)) + 1;
+                charIndexMap.put(s.charAt(i), i);
+                i = startIndex;
+                currentLength = 1;
             } else {
-                seen.put(s.charAt(i), i);
-                currentSubStringLength++;
-                if (currentSubStringLength > max) max = currentSubStringLength;
+                charIndexMap.put(s.charAt(i), i);
+                currentLength++;
+                if (currentLength > maxLength) maxLength = currentLength;
             }
 
         }
 
-        return max;
+        return maxLength;
     }
 
     private static boolean shouldUpdateSubstring(HashMap<Character, Integer> seen, char c, int start, int index) {

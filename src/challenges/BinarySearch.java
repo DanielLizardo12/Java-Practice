@@ -9,7 +9,7 @@ public class BinarySearch {
 
     public static int search(int[] ints, int target) {
         int left = 0;
-        int right = ints.length;
+        int right = ints.length - 1;
 
         while (left <= right) {
             int middle = left + (right - left) / 2;

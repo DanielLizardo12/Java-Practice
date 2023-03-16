@@ -17,7 +17,7 @@ class GroupAnagramsTest {
     public void testGroupAnagramsFistTest() {
         String[] input = {"arc", "abc", "car", "cat", "act", "acb", "atc"};
         List<List<String>> result = GroupAnagrams.groupAnagrams(input);
-        assertEquals(null, result);
+        assertEquals(3, result.size());
     }
 
 }

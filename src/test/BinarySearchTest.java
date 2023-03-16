@@ -21,7 +21,7 @@ class BinarySearchTest {
 
     @Test
     public void testBinarySearchSecondTest() {
-        int[] ints = new int[]{2, 3, 15, 18, 99, 140};
+        int[] ints = new int[]{2, 3, 15, 18, 99, 140, 222};
         int result = BinarySearch.search(ints, 80);
         assertEquals(-1, result);
     }

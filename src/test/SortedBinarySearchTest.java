@@ -53,4 +53,11 @@ class SortedBinarySearchTest {
         assertEquals(1, result);
     }
 
+    @Test
+    public void testPalindromeSeventhTest() {
+        int[] ints = new int[]{2, 3, 4, 5, 6, 2};
+        int result = SortedBinarySearch.search(ints, 777);
+        assertEquals(-1, result);
+    }
+
 }

@@ -12,7 +12,7 @@ public class BinarySearch {
         int right = ints.length - 1;
 
         while (left <= right) {
-            int middle = left + (right - left) / 2;
+            int middle = (right + left) / 2;
             if (ints[middle] == target) {
                 return middle;
             } else if (ints[middle] < target) {

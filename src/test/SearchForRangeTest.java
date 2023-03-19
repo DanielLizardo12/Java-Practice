@@ -36,4 +36,12 @@ class SearchForRangeTest {
         assertEquals(2, result[1]);
     }
 
+    @Test
+    public void testSearchRangeFourthTest() {
+        int[] ints = new int[]{1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 7, 8};
+        int[] result = SearchForRange.searchRange(ints, 5);
+        assertEquals(4, result[0]);
+        assertEquals(9, result[1]);
+    }
+
 }

@@ -12,7 +12,7 @@ public class SortedBinarySearch {
         int right = ints.length - 1;
 
         while (left <= right) {
-            int middle = (right + left) / 2;
+            int middle = left + (right - left) / 2;
             if (ints[middle] == target) {
                 return middle;
             } else if (ints[left] <= ints[middle]) {

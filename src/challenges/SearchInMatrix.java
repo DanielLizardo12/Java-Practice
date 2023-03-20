@@ -11,7 +11,10 @@ public class SearchInMatrix {
 
     public static boolean searchMatrix(int[][] matrix, int target) {
         for (int[] ints : matrix) {
-            if (ints[ints.length - 1] >= target) {
+            
+            if (ints[ints.length - 1] == target) return true;
+
+            if (ints[ints.length - 1] > target) {
                 return search(ints, target);
             }
         }

@@ -1,7 +1,5 @@
 package challenges;
 
-import java.util.Arrays;
-
 /**
  * @author Daniel
  * @Date 20/03/2023
@@ -22,7 +20,7 @@ public class BubbleSort {
                 }
             }
         }
-         
+
         return array;
     }
 

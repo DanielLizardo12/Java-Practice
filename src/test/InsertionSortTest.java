@@ -1,6 +1,6 @@
 package test;
 
-import challenges.BubbleSort;
+import challenges.InsertionSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,12 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Daniel
  * @Date 20/03/2023
  */
-
-class BubbleSortTest {
+class InsertionSortTest {
 
     @Test
     public void testBubbleSortFirstTest() {
-        int[] result = BubbleSort.bubbleSort(new int[]{3, 2, 1});
+        int[] result = InsertionSort.insertionSort(new int[]{3, 2, 1});
 
         assertEquals(1, result[0]);
         assertEquals(2, result[1]);
@@ -23,7 +22,7 @@ class BubbleSortTest {
 
     @Test
     public void testBubbleSortSecondTest() {
-        int[] result = BubbleSort.bubbleSort(new int[]{3, 2, 2, 3, 4, 5, 7, 7, 7, 1});
+        int[] result = InsertionSort.insertionSort(new int[]{3, 2, 2, 3, 4, 5, 7, 7, 7, 1});
 
         assertEquals(1, result[0]);
         assertEquals(2, result[1]);
@@ -39,14 +38,14 @@ class BubbleSortTest {
 
     @Test
     public void testBubbleSortThirdTest() {
-        int[] result = BubbleSort.bubbleSort(new int[]{});
+        int[] result = InsertionSort.insertionSort(new int[]{});
 
         assertEquals(0, result.length);
     }
 
     @Test
     public void testBubbleSortFourthTest() {
-        int[] result = BubbleSort.bubbleSort(new int[]{-100, 300, 342, 222, -123123, 1, -1, 8, 8, 0});
+        int[] result = InsertionSort.insertionSort(new int[]{-100, 300, 342, 222, -123123, 1, -1, 8, 8, 0});
 
         assertEquals(-123123, result[0]);
         assertEquals(-100, result[1]);

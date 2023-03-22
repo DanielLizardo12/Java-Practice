@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class InsertionSortTest {
 
     @Test
-    public void testBubbleSortFirstTest() {
+    public void testInsertionSortFirstTest() {
         int[] result = InsertionSort.insertionSort(new int[]{3, 2, 1});
 
         assertEquals(1, result[0]);
@@ -21,7 +21,7 @@ class InsertionSortTest {
     }
 
     @Test
-    public void testBubbleSortSecondTest() {
+    public void testInsertionSortSecondTest() {
         int[] result = InsertionSort.insertionSort(new int[]{3, 2, 2, 3, 4, 5, 7, 7, 7, 1});
 
         assertEquals(1, result[0]);
@@ -37,14 +37,14 @@ class InsertionSortTest {
     }
 
     @Test
-    public void testBubbleSortThirdTest() {
+    public void testInsertionSortThirdTest() {
         int[] result = InsertionSort.insertionSort(new int[]{});
 
         assertEquals(0, result.length);
     }
 
     @Test
-    public void testBubbleSortFourthTest() {
+    public void testInsertionSortFourthTest() {
         int[] result = InsertionSort.insertionSort(new int[]{-100, 300, 342, 222, -123123, 1, -1, 8, 8, 0});
 
         assertEquals(-123123, result[0]);

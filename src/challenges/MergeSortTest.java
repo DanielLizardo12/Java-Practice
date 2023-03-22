@@ -13,17 +13,16 @@ class MergeSortTest {
 
     @Test
     public void testMergeSortFirstTest() {
-        int[] firstArray = new int[]{2, 5, 7};
-        int[] secondArray = new int[]{1, 4, 6};
 
-        int[] result = MergeSort.mergeSort(firstArray, secondArray);
+        int[] result = MergeSort.mergeSort(new int[]{7, 3, 8, 5, 1, 9, 5});
 
         assertEquals(1, result[0]);
-        assertEquals(2, result[1]);
-        assertEquals(4, result[2]);
+        assertEquals(3, result[1]);
+        assertEquals(5, result[2]);
         assertEquals(5, result[3]);
-        assertEquals(6, result[4]);
-        assertEquals(7, result[5]);
+        assertEquals(7, result[4]);
+        assertEquals(8, result[5]);
+        assertEquals(9, result[6]);
     }
 
 }

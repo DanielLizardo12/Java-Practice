@@ -7,7 +7,7 @@ package challenges;
 
 public class MergeSort {
 
-    public static int[] mergeSort(int[] firstArray, int[] secondArray) {
+    public static int[] mergeSort(int[] array) {
         return new int[]{};
     }
 

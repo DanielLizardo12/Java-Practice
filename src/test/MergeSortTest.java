@@ -1,5 +1,6 @@
-package challenges;
+package test;
 
+import challenges.MergeSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

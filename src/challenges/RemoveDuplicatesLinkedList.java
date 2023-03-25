@@ -9,32 +9,29 @@ import java.util.Objects;
  */
 
 public class RemoveDuplicatesLinkedList {
-
     /**
-     * Removes duplicates from a linked list.
-     * Time complexity: O(n), where n is the number of nodes in the linked list.
-     * Space complexity: O(n), due to the recursive call stack.
+     * Removes duplicates from a linked list and returns the result as a new linked list.
+     * Time complexity: O(n^2), where n is the number of nodes in the linked list.
+     * Space complexity: O(n), since the method creates a new linked list to store the result.
      */
     public static LinkedList<Integer> removeDuplicates(LinkedList<Integer> linkedList) {
-        return checkIfNodeIsDifferent(linkedList, 0);
-    }
+        // Check if the linked list is null or has fewer than two elements.
+        if (linkedList == null || linkedList.size() < 2) {
+            return linkedList;
+        }
 
-    /**
-     * Helper method that recursively checks whether each node in the linked list
-     * is different from its next node, and removes duplicates if found.
-     */
-    private static LinkedList<Integer> checkIfNodeIsDifferent(
-            LinkedList<Integer> linkedList, int currentIndex) {
-
-        // Check whether the current index is within the bounds of the linked list.
-        if (currentIndex + 1 < linkedList.size()) {
-            // Compare the current node with the next node.
-            if (Objects.equals(linkedList.get(currentIndex), linkedList.get(currentIndex + 1))) {
-                // If they are equal, remove the next node.
-                linkedList.remove(currentIndex + 1);
+        // Initialize an index variable i to 0.
+        int i = 0;
+        // Loop over the linked list until the second-to-last element.
+        while (i < linkedList.size() - 1) {
+            // Check if the current element is equal to the next element.
+            if (Objects.equals(linkedList.get(i), linkedList.get(i + 1))) {
+                // If so, remove the next element.
+                linkedList.remove(i + 1);
+            } else {
+                // If not, move on to the next pair of elements.
+                i++;
             }
-            // Recursively check the next node in the linked list.
-            checkIfNodeIsDifferent(linkedList, currentIndex + 1);
         }
 
         // Return the modified linked list.

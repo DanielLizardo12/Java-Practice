@@ -26,7 +26,12 @@ class RemoveDuplicatesLinkedListTest {
 
         LinkedList<Integer> result = RemoveDuplicatesLinkedList.removeDuplicates(linkedList);
 
-        assertEquals(6, result.size());
+        assertEquals(4, result.size());
+
+        assertEquals(1, result.get(0));
+        assertEquals(2, result.get(1));
+        assertEquals(3, result.get(2));
+        assertEquals(4, result.get(3));
     }
 
 }

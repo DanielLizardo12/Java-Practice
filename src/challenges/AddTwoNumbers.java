@@ -1,5 +1,7 @@
 package challenges;
 
+import java.math.BigInteger;
+
 /**
  * @author Daniel
  * @Date 28/03/2023
@@ -11,8 +13,9 @@ public class AddTwoNumbers {
         String reversedFirstListNodeString = String.valueOf(reversedListToString(reverseListNode(l1)));
         String reversedSecondListNodeString = String.valueOf(reversedListToString(reverseListNode(l2)));
 
-        String reversedListNodesSum = Integer.parseInt(reversedFirstListNodeString)
-                + Integer.parseInt(reversedSecondListNodeString) + "";
+        BigInteger bigInteger = BigInteger.valueOf(Integer.parseInt(reversedFirstListNodeString)
+                + Integer.parseInt(reversedSecondListNodeString));
+        String reversedListNodesSum = bigInteger + "";
 
         return listNodeReversedListNodeSum(reversedListNodesSum);
     }

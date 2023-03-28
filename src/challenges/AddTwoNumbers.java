@@ -13,9 +13,9 @@ public class AddTwoNumbers {
         String reversedFirstListNodeString = String.valueOf(reversedListToString(reverseListNode(l1)));
         String reversedSecondListNodeString = String.valueOf(reversedListToString(reverseListNode(l2)));
 
-        BigInteger bigInteger = BigInteger.valueOf(Integer.parseInt(reversedFirstListNodeString)
-                + Integer.parseInt(reversedSecondListNodeString));
-        String reversedListNodesSum = bigInteger + "";
+        BigInteger bigIntegerValueFirstListNode = new BigInteger(reversedFirstListNodeString);
+        BigInteger bigIntegerValueSecondListNode = new BigInteger(reversedSecondListNodeString);
+        String reversedListNodesSum = bigIntegerValueFirstListNode.add(bigIntegerValueSecondListNode).toString();
 
         return listNodeReversedListNodeSum(reversedListNodesSum);
     }

@@ -14,7 +14,6 @@ public class ReverseLinkedList {
 
         if (linkedList == null || linkedList.size() == 0) return null;
 
-
         if (linkedList.size() == 1) return linkedList;
 
         LinkedList<Integer> result = new LinkedList<>();

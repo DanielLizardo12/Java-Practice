@@ -1,4 +1,4 @@
-package challenges.linkedList;
+package challenges;
 
 /**
  * @author Daniel

@@ -8,11 +8,6 @@ import java.math.BigInteger;
  */
 public class Fibonacci {
 
-    public static void main(String[] args) {
-        System.out.println(fibonacci(480000));
-        System.out.println(fibonacciInN(46));
-    }
-
     /**
      * Given n, return the number in the fibonacci sequence
      *

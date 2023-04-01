@@ -9,8 +9,8 @@ import java.util.Stack;
 
 public class MyQueue {
 
-    private Stack<Integer> firstStack;
-    private Stack<Integer> secondStack;
+    private final Stack<Integer> firstStack;
+    private final Stack<Integer> secondStack;
     private int firstElement;
 
     public MyQueue() {

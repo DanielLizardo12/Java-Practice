@@ -17,10 +17,6 @@ public class FindTwoSum {
 
     //we can assume that only one pair of numbers will sum to targetValue, if there are non
     //or only one value in the array we should return an empty array.
-    public static void main(String[] args) {
-        int[] ints = new int[]{12, 8, 3, 1, -1};
-        System.out.println(Arrays.toString(findTwoSum(ints, 2)));
-    }
 
     //time complexity O(n), in the worst case scenario we will loop into all the elements once
     //before finding two elements with the correct sum.

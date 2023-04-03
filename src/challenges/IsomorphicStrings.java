@@ -16,12 +16,6 @@ public class IsomorphicStrings {
     //All occurrences of a character must be replaced with another character while
     //preserving the order of characters. No two characters may map to the same character,
     //but a character may map to itself.
-    public static void main(String[] args) {
-        String string = "paper";
-        String traversed = "title";
-        System.out.println(isomorphicStrings(string, traversed));
-        System.out.println(isomorphicStringsFistApproach(string, traversed));
-    }
 
     //time complexity for this solution is time O(n) where n is the length of the input strings.
     //This is because we iterate through each character in the input strings only once,

@@ -1,7 +1,6 @@
 package challenges;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,10 +9,6 @@ import java.util.List;
  */
 
 public class Permutation {
-    public static void main(String[] args) {
-        List<int[]> permuted = permute(new int[]{1, 2, 3});
-        permuted.forEach(arr -> System.out.println(Arrays.toString(arr)));
-    }
 
     public static List<int[]> permute(int[] nums) {
         List<int[]> result = new ArrayList<>();

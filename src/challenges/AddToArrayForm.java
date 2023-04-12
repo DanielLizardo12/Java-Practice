@@ -12,8 +12,20 @@ public class AddToArrayForm {
 
     public static List<Integer> addToArrayForm(int[] num, int k) {
         List<Integer> integerList = new ArrayList<>();
-        
-        return null;
+        StringBuilder arrayToInt = new StringBuilder();
+
+        for (int j : num) {
+            arrayToInt.append(j);
+        }
+
+        StringBuilder summedArrayAndInt =
+                new StringBuilder(String.valueOf(Integer.parseInt(String.valueOf(arrayToInt)) + k));
+
+        for (int i = 0; i < summedArrayAndInt.length(); i++) {
+            integerList.add(Integer.parseInt(String.valueOf(summedArrayAndInt.charAt(i))));
+        }
+
+        return integerList;
     }
 
 }

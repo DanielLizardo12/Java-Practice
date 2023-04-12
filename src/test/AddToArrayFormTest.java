@@ -30,4 +30,16 @@ class AddToArrayFormTest {
 
     }
 
+    @Test
+    public void testAddToArraySimpleSumOneDecimal() {
+
+        int[] ints = new int[]{1, 2};
+
+        List<Integer> result = AddToArrayForm.addToArrayForm(ints, 1);
+
+        Assertions.assertEquals(1, result.get(0));
+        Assertions.assertEquals(3, result.get(1));
+
+    }
+
 }

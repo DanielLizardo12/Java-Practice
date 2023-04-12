@@ -1,5 +1,6 @@
 package challenges;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,6 +11,8 @@ import java.util.List;
 public class AddToArrayForm {
 
     public static List<Integer> addToArrayForm(int[] num, int k) {
+        List<Integer> integerList = new ArrayList<>();
+        
         return null;
     }
 

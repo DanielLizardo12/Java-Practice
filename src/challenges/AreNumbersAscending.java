@@ -7,6 +7,8 @@ package challenges;
 
 public class AreNumbersAscending {
 
-
+    public static boolean areNumbersAscending(String s) {
+        return false;
+    }
 
 }

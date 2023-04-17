@@ -7,6 +7,8 @@ package challenges;
 
 public class DigitSum {
 
-
+    public static String digitSum(String s, int k) {
+        return "string";
+    }
 
 }

@@ -16,4 +16,9 @@ class LemonadeChangeTest {
         Assertions.assertTrue(LemonadeChange.lemonadeChange(new int[]{5, 5, 5, 10, 20}));
     }
 
+    @Test
+    public void testLemonadeChangeNotEnoughChange() {
+        Assertions.assertFalse(LemonadeChange.lemonadeChange(new int[]{5, 5, 10, 10, 20}));
+    }
+
 }

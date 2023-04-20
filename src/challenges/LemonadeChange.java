@@ -11,26 +11,33 @@ public class LemonadeChange {
         int fiveDollarBill = 0, tenDollarBill = 0;
 
         for (int bill : bills) {
-            if (bill == 5) fiveDollarBill++;
+            switch (bill) {
+                case 5:
+                    fiveDollarBill++;
+                    break;
 
-            if (bill == 10) {
-                if (fiveDollarBill > 0) {
-                    fiveDollarBill--;
-                    tenDollarBill++;
-                } else {
-                    return false;
-                }
-            }
+                case 10:
+                    if (fiveDollarBill > 0) {
+                        fiveDollarBill--;
+                        tenDollarBill++;
+                    } else {
+                        return false;
+                    }
+                    break;
 
-            if (bill == 20) {
-                if (fiveDollarBill > 0 && tenDollarBill > 0) {
-                    fiveDollarBill--;
-                    tenDollarBill--;
-                } else if (fiveDollarBill > 2 && tenDollarBill == 0){
-                    fiveDollarBill -= 3;
-                } else {
-                    return false;
-                }
+                case 20:
+                    if (fiveDollarBill > 0 && tenDollarBill > 0) {
+                        fiveDollarBill--;
+                        tenDollarBill--;
+                    } else if (fiveDollarBill > 2) {
+                        fiveDollarBill -= 3;
+                    } else {
+                        return false;
+                    }
+                    break;
+
+                default:
+                    break;
             }
         }
         return true;

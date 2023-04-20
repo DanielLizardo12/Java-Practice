@@ -21,4 +21,10 @@ class LemonadeChangeTest {
         Assertions.assertFalse(LemonadeChange.lemonadeChange(new int[]{5, 5, 10, 10, 20}));
     }
 
+    @Test
+    public void testLemonadeChangeLargeInput() {
+        Assertions.assertTrue(LemonadeChange.lemonadeChange(new int[]{5, 5, 10, 20,
+                5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 5, 5, 20, 5, 20, 5}));
+    }
+
 }

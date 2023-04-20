@@ -8,7 +8,31 @@ package challenges;
 public class LemonadeChange {
 
     public static boolean lemonadeChange(int[] bills) {
-        return false;
+        int fiveDollarBill = 0, tenDollarBill = 0, twentyDollarBill = 0;
+
+        for (int bill : bills) {
+            if (bill == 5) fiveDollarBill++;
+
+            if (bill == 10) {
+                if (fiveDollarBill > 0) {
+                    fiveDollarBill--;
+                    tenDollarBill++;
+                } else {
+                    return false;
+                }
+            }
+
+            if (bill == 20) {
+                if (fiveDollarBill > 0 && tenDollarBill > 0) {
+                    fiveDollarBill--;
+                    tenDollarBill--;
+                    twentyDollarBill++;
+                } else {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }

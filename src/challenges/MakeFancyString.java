@@ -7,4 +7,8 @@ package challenges;
 
 public class MakeFancyString {
 
+    public static String makeFancyString(String s) {
+        return "";
+    }
+
 }

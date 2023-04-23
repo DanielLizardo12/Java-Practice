@@ -8,22 +8,22 @@ package challenges;
 public class MakeFancyString {
 
     public static String makeFancyString(String s) {
-        for (int i = 0; i < s.length(); i++) {
-            if (i + 1 < s.length() && s.charAt(i) == s.charAt(i + 1)) {
-                char temp = s.charAt(i);
-                for (int j = i + 1; j < s.length(); j++) {
-                    if (s.charAt(j) != temp) {
-                        if ((j - 1) - i >= 2) {
-                            s = s.substring(0, i) + s.substring(i, i + 2) + s.substring(j);
-                            System.out.println(s);
-                        }
-                        i = j;
-                        break;
-                    }
-                }
+        StringBuffer sb = new StringBuffer();
+        int length = s.length();
+        char prev = ' ';
+        int count = 1;
+        for (int i = 0; i < length; i++) {
+            char curr = s.charAt(i);
+            if (curr == prev)
+                count++;
+            else {
+                count = 1;
+                prev = curr;
             }
+            if (count < 3)
+                sb.append(curr);
         }
-        return s;
+        return sb.toString();
     }
 
 }

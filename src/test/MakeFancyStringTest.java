@@ -16,4 +16,9 @@ class MakeFancyStringTest {
         Assertions.assertEquals("leetcode", MakeFancyString.makeFancyString("leeetcode"));
     }
 
+    @Test
+    public void testMakeFancyStringMultipleRepeatedChars() {
+        Assertions.assertEquals("aabaa", MakeFancyString.makeFancyString("aaabaaaa"));
+    }
+
 }

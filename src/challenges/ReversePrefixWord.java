@@ -22,4 +22,11 @@ public class ReversePrefixWord {
         return toReverse.length() > 0 ? toReverse.reverse() + remaining : word;
     }
 
+    public String reversePrefixFaster(String word, char ch) {
+        int index = word.indexOf(ch);
+        StringBuilder sb=new StringBuilder(word.substring(0, index+1));
+        sb.reverse();
+        return sb.toString().concat(word.substring(index+1));
+    }
+
 }

@@ -12,6 +12,7 @@ public class RomanToInteger {
 
   public static void main(String[] args) {
     System.out.println(romanToInt("III"));
+    System.out.println(romanToInt("MCMXCIV"));
   }
 
   public static int romanToInt(String s) {
@@ -27,17 +28,19 @@ public class RomanToInteger {
     int totalNumber = 0;
 
     for (int i = 0; i < s.length(); i++) {
-      if (i + 1 > s.length()) {
-        if (hierarchy.get(s.charAt(i)) >= hierarchy.get(s.charAt(i + 1))) {
+      if (i + 1 != s.length()) {
+        if (hierarchy.get(s.charAt(i)) < hierarchy.get(s.charAt(i + 1))) {
           totalNumber += hierarchy.get(s.charAt(i + 1)) - hierarchy.get(s.charAt(i));
           ++i;
+        } else {
+          totalNumber += hierarchy.get(s.charAt(i));
         }
+      } else {
+        totalNumber += hierarchy.get(s.charAt(i));
       }
-      totalNumber += hierarchy.get(s.charAt(i));
     }
 
     return totalNumber;
-
   }
 
 }

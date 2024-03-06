@@ -8,4 +8,12 @@ package topInterview150.challenge;
  */
 public class TagContentExtractor {
 
+  public static void main(String[] args) {
+    contentExtractor("<h1>Nayeem loves counseling</h1>");
+  }
+
+  private static void contentExtractor(String string) {
+
+  }
+
 }

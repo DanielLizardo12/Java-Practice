@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class MinimumTimeTypewriter {
 
   public static void main(String[] args) {
-    //System.out.println(minTimeToType("abc"));
+    System.out.println(minTimeToType("abc"));
     System.out.println(minTimeToType("bza"));
   }
 

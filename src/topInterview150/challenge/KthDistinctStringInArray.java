@@ -1,6 +1,6 @@
 package topInterview150.challenge;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * KthDistinctStringInArray description.
@@ -15,7 +15,7 @@ public class KthDistinctStringInArray {
   }
 
   public static String kthDistinct(String[] arr, int k) {
-    HashMap<String, Integer> seen = new HashMap<>();
+    LinkedHashMap<String, Integer> seen = new LinkedHashMap<>();
 
     for (String s : arr) {
       if (seen.containsKey(s)) {
@@ -25,16 +25,16 @@ public class KthDistinctStringInArray {
       }
     }
 
-    int counterK = 1;
-    for (String s : arr) {
-      if (seen.get(s) == 1) {
-        if (counterK == k) {
-          return s;
-        } else {
-          counterK++;
+    for (String key: seen.keySet()) {
+        if (seen.get(key) == 1) {
+          if (k == 1) {
+            return key;
+          } else {
+            k--;
+          }
         }
-      }
     }
+
     return "";
   }
 

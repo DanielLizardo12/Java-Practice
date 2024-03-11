@@ -14,7 +14,7 @@ public class MaxOddBinary {
 
   private static String maximumOddBinaryNumber(String s) {
     int initial1Count = 0;
-    String maxBinary = "";
+    StringBuilder maxBinaryBuilder = new StringBuilder();
 
     for (int i = 0; i < s.length(); i++) {
       if (s.charAt(i) == '1') {
@@ -23,14 +23,16 @@ public class MaxOddBinary {
     }
 
     for (int i = 0; i < initial1Count; i++) {
-      maxBinary += "1";
+      maxBinaryBuilder.append("1");
     }
 
     int initial0Count = s.length() - initial1Count;
 
     for (int i = 0; i < initial0Count; i++) {
-      maxBinary += "0";
+      maxBinaryBuilder.append("0");
     }
+
+    String maxBinary = maxBinaryBuilder.toString();
 
     if (binaryToInt(maxBinary) % 2 == 0) {
       return maxOddBinary(maxBinary);
@@ -39,31 +41,22 @@ public class MaxOddBinary {
     }
   }
 
-  private static String maxOddBinary(String string) {
-    String nextMaxBinary = "";
-    for (int i = string.length() - 2; i >= 0; i--) {
-      if (string.charAt(i) == '1') {
-        nextMaxBinary = string.substring(0, i) + "01" + string.substring(i + 2);
-        break;
-      }
-    }
-    if (binaryToInt(nextMaxBinary) % 2 == 0) {
+  private static String maxOddBinary(String binaryString) {
+    int last1Index = binaryString.lastIndexOf('1');
+
+    String nextMaxBinary = binaryString.substring(0, last1Index) + "01"
+        + binaryString.substring(last1Index + 2);
+
+    if (binaryToInt(nextMaxBinary) % 2 == 0){
       return maxOddBinary(nextMaxBinary);
     }
+
     return nextMaxBinary;
   }
 
 
-  private static int binaryToInt(String string) {
-    int currentIntBinaryValue = 1;
-    int number = 0;
-    for (int i = string.length() - 1; i >= 0; i--) {
-      if (string.charAt(i) == '1') {
-        number += currentIntBinaryValue;
-      }
-      currentIntBinaryValue = currentIntBinaryValue * 2;
-    }
-    return number;
+  private static int binaryToInt(String binaryString) {
+    return Integer.parseInt(binaryString, 2);
   }
 
 }

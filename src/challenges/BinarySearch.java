@@ -1,5 +1,7 @@
 package challenges;
 
+import java.util.Arrays;
+
 /**
  * @author Daniel
  * @Date 16/03/2023
@@ -8,6 +10,7 @@ package challenges;
 public class BinarySearch {
 
     public static int search(int[] ints, int target) {
+        Arrays.sort(ints);
         int left = 0;
         int right = ints.length - 1;
 

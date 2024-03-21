@@ -21,9 +21,10 @@ public class GreatestCommonDivisor {
     String greatestCommonDivisor = "";
 
     for (int i = 1; i <= str1.length(); i++) {
-      if (str1.split(str1.substring(0, i)).length == 0
-          && str2.split(str1.substring(0, i)).length == 0) {
-        greatestCommonDivisor = str1.substring(0,i);
+      String substring = str1.substring(0, i);
+      if (str1.split(substring).length == 0
+          && str2.split(substring).length == 0) {
+        greatestCommonDivisor = substring;
       }
     }
 

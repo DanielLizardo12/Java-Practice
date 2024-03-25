@@ -1,7 +1,5 @@
 package challenges;
 
-import java.util.Arrays;
-
 /**
  * CanPlaceFlowers description.
  *
@@ -24,7 +22,7 @@ public class CanPlaceFlowers {
     }
 
     for (int i = 0; i < flowerBed.length; i++) {
-      
+
       if (flowerBed[i] == 0) {
         if (i == 0 && flowerBed[i + 1] == 0) {
           flowerBed[i] = 1;

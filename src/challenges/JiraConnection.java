@@ -29,8 +29,10 @@ public class JiraConnection {
 
   public static String loginToJira() {
     StringBuilder loginResponse = new StringBuilder();
+
     URL url = null;
     HttpURLConnection conn = null;
+
     String input = "{\"username\":\"" + LOGIN_USERNAME + "\",\"password\":\"" + LOGIN_PASSWORD + "\"}";
     BufferedReader bufferedReader = null;
 
@@ -52,14 +54,8 @@ public class JiraConnection {
         while ((output = bufferedReader.readLine()) != null) {
           loginResponse.append(output);
         }
-      } else {
-        // Handle error response
-        bufferedReader = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
-        String output;
-        while ((output = bufferedReader.readLine()) != null) {
-          loginResponse.append(output);
-        }
       }
+
     } catch (IOException e) {
       e.printStackTrace();
     } finally {
@@ -81,6 +77,7 @@ public class JiraConnection {
     // Extract the JSESSIONID substring
     String jSessionID = loginResponse.substring(startIndex, endIndex);
 
+    System.out.println("JSESSIONID: " + jSessionID);
     System.out.println("Issues assigned to user: ");
     String issuesResponse = getIssuesAssignedToUser(LOGIN_USERNAME, jSessionID);
     System.out.println(issuesResponse);
@@ -108,14 +105,8 @@ public class JiraConnection {
         while ((output = bufferedReader.readLine()) != null) {
           issuesResponse.append(output);
         }
-      } else {
-        // Handle error response
-        bufferedReader = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
-        String output;
-        while ((output = bufferedReader.readLine()) != null) {
-          issuesResponse.append(output);
-        }
       }
+
     } catch (IOException e) {
       e.printStackTrace();
     } finally {

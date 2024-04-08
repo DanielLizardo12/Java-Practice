@@ -27,7 +27,7 @@ public class Snake {
   }
 
   public static void main(String[] args) {
-    Snake snake = new Snake(5,8,2,1);
+    Snake snake = new Snake(2,2,0,0);
     snake.snakeGame();
   }
 
@@ -81,6 +81,9 @@ public class Snake {
 
       if (board[x][y] == 2) {
         snakeSize++;
+
+        if (win(board)) return;
+
         generateRandomFood(board, height, width);
       }
 
@@ -107,6 +110,17 @@ public class Snake {
 
     board[randomHeight][randomWidth] = 2;
     return board;
+  }
+
+  private boolean win(int[][] board) {
+    for (int[] row : board) {
+      for (int element : row) {
+        if (element == 0) return false;
+        }
+      }
+
+    System.out.println("you won!");
+    return true;
   }
 
 

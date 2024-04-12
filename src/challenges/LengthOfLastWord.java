@@ -24,4 +24,9 @@ public class LengthOfLastWord {
     return 0;
   }
 
+  private static int lengthOfLastWord2(String s) {
+    String[] splitedString = s.split(" ");
+    return splitedString[splitedString.length - 1].length();
+  }
+
 }

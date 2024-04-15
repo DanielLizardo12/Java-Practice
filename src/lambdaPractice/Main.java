@@ -52,10 +52,9 @@ public class Main {
     int[] numbers = new int[]{1,1,2,2,2,2,2,3,4,4,4,4,5,6,7,8,9,10};
 
     Arrays.stream(numbers)
+        .filter(number -> number % 2 == 0)
         .boxed()
         .collect(Collectors.toSet())
-        .stream()
-        .filter(number -> number % 2 == 0)
         .forEach(System.out::println);
 
     Cat cat1 = new Cat(1,"JimmyMcgill");

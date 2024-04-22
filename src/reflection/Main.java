@@ -2,6 +2,7 @@ package reflection;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 /**
  * Main description.
@@ -19,13 +20,14 @@ public class Main {
     System.out.println(cat.getName());
 
     for (Field field: catFields) {
-      if (field.getName().equals("name")) {
+      System.out.println(field.getName());
+      if (field.getName().equals("dontChangeThisEVER")) {
         field.setAccessible(true);
         field.set(cat, "Lalo");
       }
     }
 
-    System.out.println(cat.getName());
+    System.out.println(cat.getDontChangeThisEVER());
 
     Method[] catMethods = cat.getClass().getDeclaredMethods();
 

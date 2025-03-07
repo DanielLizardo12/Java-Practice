@@ -1,7 +1,5 @@
 package topInterview150SecondAttempt.challenge;
 
-import java.util.Arrays;
-
 /**
  * RemoveDuplicatesFromSortedArray description.
  *

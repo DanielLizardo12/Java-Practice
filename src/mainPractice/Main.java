@@ -9,7 +9,17 @@ package mainPractice;
 public class Main {
 
   public static void main(String[] args) {
-    System.out.println("hello");
+    
+    byte byteNumber = 127;
+    System.out.println("byteNumber = " + byteNumber);
+    System.out.println(Byte.SIZE);
+
+    long longNumber = 2147483648L;
+
+    longNumber += 1;
+
+    System.out.println(longNumber);
+    
   }
 
 }

@@ -27,7 +27,7 @@ public class Snake {
   }
 
   public static void main(String[] args) {
-    Snake snake = new Snake(2,2,0,0);
+    Snake snake = new Snake(10,10,0,0);
     snake.snakeGame();
   }
 
@@ -44,28 +44,28 @@ public class Snake {
     while (scanner.hasNext()) {
 
       switch (scanner.nextLine()) {
-        case "l":
+        case "a":
           if (y - 1 < 0) {
             y = width - 1;
           } else {
             y--;
           }
           break;
-        case "r":
+        case "d":
           if (y + 1 >= width) {
             y = 0;
           } else {
             y++;
           }
           break;
-        case "u":
+        case "w":
           if (x - 1 < 0) {
             x = height - 1;
           } else {
             x--;
           }
           break;
-        case "d":
+        case "s":
           if (x + 1 >= height) {
             x = 0;
           } else {
@@ -75,7 +75,7 @@ public class Snake {
       }
 
       if (board[x][y] == 1) {
-        System.out.println("YOU LOST! HAHAHAHAHHA");
+        System.out.println("YOU LOST!");
         return;
       }
 
